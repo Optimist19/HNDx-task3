@@ -1,17 +1,15 @@
-import { auth } from "../firebase"
-import {Navigate} from 'react'
+import {Navigate} from 'react-router-dom'
+import { useContext } from 'react'
+import { Context } from '../Context/AuthContext'
 
 
-function RequireAuth({children}) {
+export function RequireAuth({children}) {
 
-	if(!auth.user){
-		return <Navigate to="/login" />
+	const {auth} = useContext(Context)
+
+	if(!auth){
+		return <Navigate to="/login" replace/>
 	}else{
-		
 		return children
 	}
-
-
 }
-
-export default RequireAuth
