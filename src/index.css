@@ -1,0 +1,148 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.logout-img{
+  position: fixed;
+  left: 1vw;
+  width: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.logout-img img{
+  width: 100%;
+}
+
+.drop-box{
+  width: 40vw;
+  background-image: url('./assets/drag-drop-upload-1.gif');
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  margin: 2vh auto;
+  background-position: center;
+}
+
+.drop-box p{
+  margin-top: 2vh;
+  font-weight: bold;
+}
+
+.image-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+  gap: 2vh 0;
+}
+
+.img-div{
+  width: 15vw;
+}
+
+img{
+  width: 100%;
+}
+
+
+.form-container{
+  width: 40vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
+  color: white;
+}
+
+.form-container a{
+  color:greenyellow;
+  text-decoration: none;
+}
+
+.form-container div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+form input{
+  padding: 2vh 2vw;
+  max-width: 30vw;
+  margin: 2vh 0;
+  border: none;
+}
+
+form button{
+  padding: 1vh 2vw;
+  margin: 2vh 0;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover{
+  background-color: black;
+  color: white;
+}
+
+
+
+@media screen and (max-width: 648px){
+  body{
+    background-color: black;
+  }
+
+  .form-container h1{
+    font-size: 20px;
+  }
+
+  .logout-img{
+    border: 1px dotted greenyellow;
+  }
+
+  .drop-box{
+    width: 60vw;
+  }
+
+}
+
+@media screen and (max-width: 575px){
+
+  .drop-box{
+    width: 60vw;
+  }
+
+  .image-container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 442px){
+  .image-container{
+    grid-template-columns: 1fr;
+  }
+
+  .img-div{
+    width: 25vw;
+  }
+
+  .drop-box{
+    width: 70vw;
+  }
+}
+
