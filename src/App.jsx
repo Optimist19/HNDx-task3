@@ -4,8 +4,8 @@ import NotFoundPage from "./Pages/NotFoundPage";
 import SignUp from './Pages/SignUp'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // import {Outlet} from 'react-router-dom'
-import { AuthContext } from "./Context/AuthContext";
-import { RequireAuth } from "./Pages/RequireAuth";
+// import { AuthContext } from "./Context/AuthContext";
+// import { RequireAuth } from "./Pages/RequireAuth";
 
 
 function App() {
@@ -13,7 +13,8 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <RequireAuth><Home /></RequireAuth>
+      element: <Home />
+      // element: <RequireAuth><Home /></RequireAuth>
     },
     {
       path: "/signup",
@@ -31,9 +32,9 @@ function App() {
 
   return (
     <>
-      <AuthContext>
+      {/* <AuthContext> */}
         <RouterProvider router={router} />
-      </AuthContext>
+      {/* </AuthContext> */}
     </>
   );
 }

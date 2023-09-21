@@ -26,6 +26,8 @@ export default function Login() {
     e.preventDefault();
 
     try {
+      // const auth = getAuth();
+
       const useCredentials = await signInWithEmailAndPassword(
         auth,
         userDetails.email,

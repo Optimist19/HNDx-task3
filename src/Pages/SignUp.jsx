@@ -26,6 +26,8 @@ export default function SignUp() {
     e.preventDefault();
 
     try {
+      // const auth = getAuth();
+
       const useCredentials = await createUserWithEmailAndPassword(
         auth,
         userDetails.email,
