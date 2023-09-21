@@ -4,20 +4,80 @@
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
+
 .logout-img{
-  /* position: fixed;
-  left: 1vw; */
-  width: 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: red
+  flex-direction: column;
+  position: fixed;
 }
 
-.logout-img img{
+.tab{
+  display: flex;
+  justify-content: center;
+  margin: 2vh 0;
+}
+
+.tab button{
+  padding: 1vh 1.5vw;
+  text-transform: uppercase;
+  border: navajowhite;
+  border-radius: 50px;
+  background: #3d93b9;
+  color: #fff;
+}
+
+
+
+.filterItem button:hover {
+  background: #222;
+  cursor: pointer;
+}
+
+li{
+  display: inline-flex;
+}
+
+.input{
+  display: flex;
+  justify-content: center;
+  margin: 2vh 0;
+}
+
+input{
+  padding: 1vh 1.5vw;
+  border-radius: 3px;
+  border: none;
+  background-color: #3d93b9;
+  color: #fff;
+}
+
+input::placeholder{
+  color: white;
+}
+
+.sortable-con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vh 1vw;
+}
+
+.img-con{
+  width: 25vw;
+}
+
+.img-con img{
   width: 100%;
+  /* height: 25vh; */
+  object-fit: contain;
 }
-
 
 
 .form-container{
@@ -77,93 +137,9 @@ form button:hover{
   justify-content: center;
 }
 
-.galleryItem img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.galleryContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 20px;
-}
-
-.galleryWrapper {
-  padding: 5% 10%;
-}
-
-.filterItem ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  gap: 20px;
-  margin-bottom: 30px;
-}
-
-.filterItem ul button {
-  background: #3d93b9;
-  color: #fff;
-  padding: 8px 46px;
-  text-transform: uppercase;
-  border: navajowhite;
-  font-size: 17px;
-  border-radius: 50px;
-}
-
-.filterItem ul button:hover {
-  background: #222;
-  cursor: pointer;
-}
-
-.galleryItem img {
-  border-radius: 15px;
-}
-
-
-@media screen and (max-width: 648px){
-  body{
-    background-color: black;
-  }
-
-  .form-container h1{
-    font-size: 20px;
-  }
-
-  .logout-img{
-    border: 1px dotted greenyellow;
-  }
-
-  .drop-box{
-    width: 60vw;
-  }
-
-}
-
-@media screen and (max-width: 575px){
-
-  .drop-box{
-    width: 60vw;
-  }
-
-  .image-container{
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
 @media screen and (max-width: 442px){
-  .image-container{
-    grid-template-columns: 1fr;
-  }
-
-  .img-div{
-    width: 25vw;
-  }
-
-  .drop-box{
-    width: 70vw;
+  .tab{
+    display: none;
   }
 }
-
