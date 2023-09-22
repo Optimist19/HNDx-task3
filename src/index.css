@@ -139,7 +139,20 @@ form button:hover{
 
 
 @media screen and (max-width: 442px){
-  .tab{
+  /* .tab{
     display: none;
+  } */
+  .tab{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    margin: 2vh 0;
+    position: fixed;
+    top: 17vh;
+  }
+  .tab button{
+    font-size: 9px;
+    margin: 2vh 0;
   }
 }

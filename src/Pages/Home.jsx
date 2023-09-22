@@ -67,7 +67,7 @@ function Home() {
   function searchFtn(e){
 
     const char = data.filter(a =>{
-      return a.name.toLowerCase().includes(e.target.value.toLowerCase())
+      return a.name.toLowerCase().includes(searchInput.toLowerCase())
     })
     setData(char)
     setSearchInput(e.target.value)
